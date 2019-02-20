@@ -1,0 +1,25 @@
+	.box{
+		padding: 10px;
+		background-color: rgb(235, 235, 224);
+	}
+	.box:hover{
+		box-shadow: 5px 8px 40px gray;
+	}
+	.textbox{
+		outline: none;
+		display: block;
+		border: none;
+		border-bottom: 1px solid rgba(107, 107, 71, 0.5);
+		padding: 15px;
+		margin-left: 10px;
+		margin-top: 0px;
+		width: 200px;
+		font-size: 15px;
+		transition: width 1s;
+	}
+	.textbox:hover{
+		border-color: rgba(107, 107, 71, 1)
+	}
+	.textbox:focus{
+		width: 390px;
+	}

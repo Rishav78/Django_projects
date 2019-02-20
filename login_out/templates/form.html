@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style type="text/css">
+	body{
+		font-size: 0px;
+	}
+	ul{
+		display: none;
+	}
+</style>
+
+</head>
+<body>
+	<form action="{% url 'form' %}" method="post">
+	{% csrf_token %}
+<input type="text" name="username" maxlength="150" autofocus required id="id_username"><br>
+<input type="password" name="password1" required id="id_password1"><br>
+<input type="password" name="password2" required id="id_password2"><br>
+<input type="submit" name="">
+</form>
+</body>
+</html>

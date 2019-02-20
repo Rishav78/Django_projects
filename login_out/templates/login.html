@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% block b1 %}
+<style type="text/css">
+	input[type="submit"]{
+		padding: 18px;
+		width: 420px;
+		display: block;
+		margin-left: 10px; 
+		border: none;
+		background-color: red;
+		color: white;
+		font-size: 15px;
+		font-weight: bold;
+	}
+	input[type="submit"]:hover{
+		cursor: pointer;
+		box-shadow: 8px 8px 20px gray;
+	}
+
+	.box{
+		padding: 10px;
+		background-color: rgba(235, 235, 224,0.5);
+	}
+	.box:hover{
+		box-shadow: 5px 8px 40px gray;
+	}
+	.textbox{
+		outline: none;
+		display: block;
+		border: none;
+		border: 2px solid rgba(107, 107, 71, 0.5);
+		padding: 10px;
+		margin-left: 10px;
+		margin-top: 0px;
+		width: 400px;
+		font-size: 15px;
+	}
+	.textbox:hover{
+		border-color: rgba(107, 107, 71, 1);
+		box-shadow: 8px 8px 20px gray;
+	}
+
+	table{
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border: none;
+		width: 800px;
+		margin: auto;
+		height: 500px;
+		background-color: white;
+	}
+	table:hover{
+		box-shadow: 5px 8px 40px black;
+	}
+	table td{
+		padding: 25px;
+		border: none;
+		width: 450px;
+		max-width: 450px;
+		min-width: 450px;
+		overflow: hidden;
+	}
+	.table{
+		margin-top: 150px;
+		margin-bottom: 0px;
+	}
+	table td.border{
+		border-left: 1px solid rgba(26, 26, 26, 0.9);
+	}
+
+	.btn a{
+		display: inline-block;
+		background-color: red;
+		width: 70px;
+		height: 25px;
+		float: left;
+		padding: 15px;
+		font-size: 20px;
+		margin: 15px;
+		text-align: center;
+		border-radius: 5px;
+		transition: height 1s, letter-spacing 1s, font-size 1s, color 1s, background-color 1s;
+		text-decoration: none;
+		color: white;
+	}
+	.btn:hover a{
+		height: 20px;
+		letter-spacing: 2px;
+		cursor: pointer;
+		background-color: white;
+		color: red;
+		border-bottom: 1px solid red;
+		box-shadow: 8px 10px 10px rgb(153, 153, 102);
+	}
+	.btn:active a{
+		margin-top: 16px; 
+		box-shadow: 7px 8px 10px rgba(153, 153, 102, 0.5);
+	}
+
+	select, option{
+		outline: none;
+		display: block;
+		border: none;
+		border: 2px solid rgba(107, 107, 71, 0.5);
+		padding: 10px;
+		margin: 10px;
+		width: 420px;
+		font-size: 15px;
+	}
+	select:hover{
+		border-color: rgba(107, 107, 71, 1);
+		box-shadow: 8px 8px 20px gray;
+	}
+	option:hover
+	{
+		border-color: rgba(107, 107, 71, 0.1);
+	}
+	body{
+		background-color: rgba(26, 26, 26, 0.9);
+	}
+
+	.container{
+		max-width: 1500px;
+		min-width: 1500px;
+		width: 100%;
+		margin: auto;
+	}
+</style>
+{% endblock %}
+{% block b2 %}
+<div class="container">
+	<div class="table">
+	<table border="1" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				hvsahvhgsc
+			</td>
+			<td class="border">
+				<div class="box">
+					<form action="{% url 'in' %}" method="post">
+						{% csrf_token %}
+					<p style="font-size: 18px;font-weight: lighter;margin-top: 15px;margin-bottom: 5px;opacity: 0.8;">USERNAME</p>
+					<input type="text" name="username" autofocus required id="id_username" class="textbox" placeholder="ENTER YOUR ID">
+
+					<p style="font-size: 18px;font-weight: lighter;margin-top: 15px;margin-bottom: 5px;opacity: 0.8;">PASSWORD</p>
+					<input type="password" class="textbox" name="password" required id="id_password" placeholder="PASSWORD">
+
+					<p style="font-size: 18px;font-weight: lighter;margin-top: 15px;margin-bottom: 5px;opacity: 0.8;">INSTITUTE</p>
+					<select>
+						<option>CUIET</option>
+					</select>
+
+					<p style="font-size: 18px;font-weight: lighter;margin-top: 15px;margin-bottom: 5px;opacity: 0.8;">SESSION</p>
+					<select>
+						<option>2018-2019</option>
+						<option>2017-2018</option>
+						<option>2016-2017</option>
+						<option>2015-2016</option>
+						<option>2014-2015</option>
+						<option>2013-2014</option>
+						<option>2012-2013</option>
+						<option>2011-2012</option>
+						<option>2010-2011</option>
+						<option>2009-2010</option>
+						<option>2008-2009</option>
+						<option>2006-2007</option>
+						<option>2005-2006</option>
+					</select>
+					<div class="btn"><input type="submit" name="" value="LOGIN"></div>
+					<a style="text-decoration: none;color: red;font-weight: lighter;font-size: 18px;display: block;margin-top: 10px;margin-left: 10px;">Forget Password</a>
+				</form>
+				</div>
+			</td>
+		</tr>
+	</table></div>
+</div>
+{% endblock %}
