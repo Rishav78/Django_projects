@@ -9,7 +9,7 @@ def Home(request):
 
 @login_required(login_url="in")
 def welcome(request):
-    return HttpResponse("YOU ARE LOGED IN")
+    return render(request,'Home.html')
 
 # def f(request):
 #     if request.method == 'POST':

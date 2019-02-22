@@ -1,0 +1,299 @@
+{% extends 'base.html' %}
+{% block b1 %}
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+	.container{
+		max-width: 1500px;
+		margin: auto;
+	}
+	.topdown
+	{
+			position:relative;
+			animation:animatetop 0.4s;
+		}
+		@keyframes animatetop
+		{from
+			{
+				top:300px;
+				opacity:0;
+			}
+		 to{
+		 	top:0;
+		 	opacity:1;
+		 	}
+		 }
+	ul {
+	  list-style-type: none;
+	  margin: 8px;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #333;
+	}
+	li {
+	  display: inline-block;
+	}
+	li a, .dropbtn {
+	  display: inline-block;
+	  color: white;
+	  text-align: center;
+	  border: 1px solid #333;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+	li a:hover{
+		background-color: white;
+	  color: #333;
+	}
+	.dropdown-content {
+	  display: none;
+	  position: absolute;
+	  background-color: #f9f9f9;
+	  min-width: 160px;
+	  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	  z-index: 1;
+	}
+	.dropdown-content a {
+	  color: black;
+	  padding: 12px 16px;
+	  text-decoration: none;
+	  display: block;
+	  text-align: left;
+	}
+	.dropdown-content a:hover {background-color: #f1f1f1}
+	.dropdown:hover .dropdown-content {
+	  display: block;
+	}
+
+	.twitter-container{
+		display: flex;
+		align-items: stretch;
+		margin: 8px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		justify-content: space-around;
+	}
+	.twitter-container .div{
+		padding: 20px;
+	}
+	.tbox1{
+		flex: 1;
+		text-align: center;
+		background-color: #f1f1f1;
+	}
+	.tbox2{
+		flex: 2;
+		background-color: #f1f1f1;
+	}
+	.tbox3{
+		flex: 1;
+		text-align: center;
+		background-color: #f1f1f1;
+	}
+
+	.flex-container{
+		display: flex;
+		align-items: stretch;
+		justify-content: space-around;
+	}
+	.container-box{
+		width: 19%;
+		box-shadow: 8px 8px 20px gray;
+	}
+	.container-box:hover{
+		cursor: pointer;
+		box-shadow: 5px 5px 20px gray;
+	}
+	.container-box .box{
+		padding: 10px;
+		overflow: hidden;
+	}
+	.box1{
+		flex: 1;
+	}
+	.box2{
+		flex: 1;
+	}
+	.box3{
+		flex: 1;
+	}
+	.box4{
+		flex: 1;
+	}
+	.box5{
+		flex: 1;
+	}
+	.subCardImage{
+		height: inherit;
+		width: 25%;
+		float: left;
+	}
+	.subCardContent{
+		width: 75%;
+		height: inherit;
+		float: left;
+	}
+	.icon{
+		font-size: 25px;
+		color: white;
+		padding: 10px;
+		background-color: #1a66ff;
+		opacity: 0.7;
+		border-radius: 5px;
+	}
+	.icon:hover{
+		opacity: 1;
+	}
+	</style>
+{% endblock %}
+{% block b2 %}
+<div class="container">
+	<img src="chalkpad_logo.PNG" width="20%" height="20%" style="display: block;">
+	<ul class="topdown">
+		<li class="dropdown">
+	    <a href="" class="dropbtn">Student Info</a>
+	    <div class="dropdown-content">
+	      <a href="#">Complete Info</a>
+	      <a href="#">Placement Info</a>
+	      <a href="#">Apply Duty/Medical Leave</a>
+	      <a href="">Display Institute Notices</a>
+	      <a href="">Display Institute Events</a>
+	      <a href="">Display Admin Messages</a>
+	      <a href="">Display All Alerts</a>
+	      <a href="">Task Manager</a>
+	      <a href="">Download Section</a>
+	      <a href="">Gate Pass</a>
+	      <a href="">Change Password</a>
+	    </div>
+		</li>
+		<li class="dropdown"><a href="" class="dropbtn">Facility</a>
+			<div class="dropdown-content">
+				<a href="">Hostel Facility</a>
+				<a href="">Transport Facility</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<a href="" class="dropbtn">Dues</a>
+			<div class="dropdown-content">
+				<a href="">Online Net Banking Fee Payment</a>
+				<a href="">Fines</a>
+				<a href="">Fee Payment History</a>
+				<a href="">Other Dues Paid History</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<a href="" class="dropdown">Academic Details</a>
+			<div class="dropdown-content">
+				<a href="">Time Table</a>
+				<a href="">Resources</a>
+				<a href="">Display Attendance</a>
+				<a href="">Display Marks</a>
+				<a href="">Display Grade Card</a>
+				<a href="">Assignment</a>
+			</div>
+		</li>
+		<li class="dropdown">
+			<a href="" class="dropdown">Feedback/Quiz</a>
+			<div class="dropdown-content">
+				<a href="">Student Feedback Form</a>
+				<a href="">Advance Feedback Form</a>
+			</div>
+		</li>
+		<li><a href="">XLPAT</a></li>
+		<li><a href="">Hostel Checkout</a></li>
+		<li><a href="">Online Request</a></li>
+		<li class="dropdown">
+			<a href="" class="dropdown">Registration Form</a>
+			<div class="dropdown-content">
+				<a href="">Placement</a>
+				<a href="">Reappear Registration Form</a>
+				<a href="">Modular Registration Form</a>
+				<a href="">Online Registration Form</a>
+				<a href="">Online Toast Master Registration</a>
+				<a href="">Online E-CELL Registration</a>
+			</div>
+		</li>
+	</ul>
+
+	<div class="twitter-container topdown">
+		<div class="tbox1 div">
+			<div class="fa fa-twitter" style="font-size: 100px;color: #1a66ff;padding: 0px;"></div>
+		</div>
+		<div class="tbox2 div">
+			ksc
+		</div>
+		<div class="tbox3 div">
+			<div class="fa fa-facebook icon"></div>
+			<div class="fa fa-twitter icon"></div>
+			<div class="fa fa-youtube icon"></div>
+		</div>
+	</div>
+
+	<div class="flex-container topdown">
+		<div class="container-box">
+			<div class="box1 box">
+				<div class="subCardImage">
+					<img src=" cd" style="display: inline;">
+				</div>
+				<div class="subCardContent">
+					<h3 style="display: inline;">
+					APPLY DUTY/MEDICAL LEAVE
+					</h3>
+					<p>Apply Duty/ Medical Leave online</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-box">
+			<div class="box2 box">
+				<div class="subCardImage">
+					<img src=" cd" style="display: inline;">
+				</div>
+				<div class="subCardContent">
+					<h3 style="display: inline;" align="left">
+					GATE PASS
+					</h3>
+					<p>Student required this Gate Pass whenever he/she enters/left the university</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-box">
+			<div class="box3 box">
+				<div class="subCardImage">
+					<img src=" cd" style="display: inline;">
+				</div>
+				<div class="subCardContent">
+					<h3 style="display: inline;" align="left">
+					MARKS
+					</h3>
+					<p>Coursewise marks in Practicals/Theories/ Sessionals/Assignments in accordance with the semester can be viewed.</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-box">
+			<div class="box4 box">
+				<div class="subCardImage">
+					<img src=" cd" style="display: inline;">
+				</div>
+				<div class="subCardContent">
+					<h3 style="display: inline;" align="left">
+					GRADE INFO
+					</h3>
+					<p>Overall Grade list or grade list of respective semeter can be viewed</p>
+				</div>
+			</div>
+		</div>
+		<div class="container-box">
+			<div class="box5 box">
+				<div class="subCardImage">
+					<img src=" cd" style="display: inline;">
+				</div>
+				<div class="subCardContent">
+					<h3 style="display: inline;" align="left">
+					FACILITY
+					</h3>
+					<p>Hostel Facility Transport facility</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

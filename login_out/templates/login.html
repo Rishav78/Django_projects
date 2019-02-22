@@ -96,7 +96,22 @@
 		margin-top: 16px; 
 		box-shadow: 7px 8px 10px rgba(153, 153, 102, 0.5);
 	}
-
+	.top
+	{
+			position:relative;
+			animation:animatetop 0.4s;
+		}
+		@keyframes animatetop
+		{from
+			{
+				top:100px;
+				opacity:0;
+			}
+		 to{
+		 	top:0;
+		 	opacity:1;
+		 	}
+		 }
 	select, option{
 		outline: none;
 		display: block;
@@ -129,7 +144,7 @@
 {% endblock %}
 {% block b2 %}
 <div class="container">
-	<div class="table">
+	<div class="table top">
 	<table border="1" cellpadding="0" cellspacing="0">
 		<tr>
 			<td>
