@@ -11,17 +11,18 @@
 			position:relative;
 			animation:animatetop 0.4s;
 		}
-		@keyframes animatetop
-		{from
-			{
-				top:300px;
-				opacity:0;
-			}
-		 to{
+	@keyframes animatetop
+	{
+		from
+		{
+			top:300px;
+			opacity:0;
+		}
+		to{
 		 	top:0;
 		 	opacity:1;
-		 	}
 		 }
+	}
 	ul {
 	  list-style-type: none;
 	  margin: 8px;
@@ -67,9 +68,7 @@
 	.twitter-container{
 		display: flex;
 		align-items: stretch;
-		margin: 8px;
-		margin-top: 20px;
-		margin-bottom: 20px;
+		margin: 20px 8px 20px 8px;
 		justify-content: space-around;
 	}
 	.twitter-container .div{
@@ -93,10 +92,14 @@
 	.flex-container{
 		display: flex;
 		align-items: stretch;
-		justify-content: space-around;
+		/*justify-content: space-around;*/
+		flex-wrap: wrap;
+		margin: 18px 6px 18px 6px;
 	}
 	.container-box{
-		width: 19%;
+		flex: 1;
+		min-width: 200px;
+		margin: 2px 2px 2px 2px;
 		box-shadow: 8px 8px 20px gray;
 	}
 	.container-box:hover{
@@ -106,21 +109,6 @@
 	.container-box .box{
 		padding: 10px;
 		overflow: hidden;
-	}
-	.box1{
-		flex: 1;
-	}
-	.box2{
-		flex: 1;
-	}
-	.box3{
-		flex: 1;
-	}
-	.box4{
-		flex: 1;
-	}
-	.box5{
-		flex: 1;
 	}
 	.subCardImage{
 		height: inherit;
@@ -139,16 +127,47 @@
 		background-color: #1a66ff;
 		opacity: 0.7;
 		border-radius: 5px;
+		width: 25px
 	}
 	.icon:hover{
 		opacity: 1;
+	}
+
+	.Activitys-container{
+		display: flex;
+		/*margin: 8px 10px 8px 10px;*/
+	}
+	.Abox1{
+		flex: 2;
+	}
+	.Abox2{
+		flex: 1;
+	}
+	.Activity-sub-conatiner{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.ASbox{
+		padding: 20px;
+		margin: 20px;
+		flex: 1;
+	}
+	.ASbox-Recent-Activity{
+		border: 1px solid black;
+		flex: 1;
+		margin: 10px;
+	}
+	.Entity{
+		border-bottom: 1px solid black;
+		padding: 7px;
+		margin: 5px;
 	}
 	</style>
 {% endblock %}
 {% block b2 %}
 <div class="container">
 	<img src="chalkpad_logo.PNG" width="20%" height="20%" style="display: block;">
-	<ul class="topdown">
+	<ul>
 		<li class="dropdown">
 	    <a href="" class="dropbtn">Student Info</a>
 	    <div class="dropdown-content">
@@ -214,6 +233,7 @@
 		</li>
 	</ul>
 
+
 	<div class="twitter-container topdown">
 		<div class="tbox1 div">
 			<div class="fa fa-twitter" style="font-size: 100px;color: #1a66ff;padding: 0px;"></div>
@@ -228,9 +248,10 @@
 		</div>
 	</div>
 
+
 	<div class="flex-container topdown">
 		<div class="container-box">
-			<div class="box1 box">
+			<div class="box">
 				<div class="subCardImage">
 					<img src=" cd" style="display: inline;">
 				</div>
@@ -243,7 +264,7 @@
 			</div>
 		</div>
 		<div class="container-box">
-			<div class="box2 box">
+			<div class="box">
 				<div class="subCardImage">
 					<img src=" cd" style="display: inline;">
 				</div>
@@ -256,7 +277,7 @@
 			</div>
 		</div>
 		<div class="container-box">
-			<div class="box3 box">
+			<div class="box">
 				<div class="subCardImage">
 					<img src=" cd" style="display: inline;">
 				</div>
@@ -269,7 +290,7 @@
 			</div>
 		</div>
 		<div class="container-box">
-			<div class="box4 box">
+			<div class="box">
 				<div class="subCardImage">
 					<img src=" cd" style="display: inline;">
 				</div>
@@ -282,7 +303,7 @@
 			</div>
 		</div>
 		<div class="container-box">
-			<div class="box5 box">
+			<div class="box">
 				<div class="subCardImage">
 					<img src=" cd" style="display: inline;">
 				</div>
@@ -291,6 +312,125 @@
 					FACILITY
 					</h3>
 					<p>Hostel Facility Transport facility</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="Activitys-container">
+		<div class="Abox1">
+			<div class="Activity-sub-conatiner">
+				<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Recent Activity</div>
+					<div style="padding: 10px;"><button>Notice</button><button>Last Uploaded Resources</button><button>Download Section</button></div>
+						<div style="margin: 5px;font-size: 25px;">
+							<div class="Entity">1</div>
+							<div class="Entity">2</div>
+							<div class="Entity">3</div>
+							<div class="Entity">4</div>
+							<div class="Entity">5</div>
+							<div class="Entity">6</div>
+							<div class="Entity">7</div>
+							<div class="Entity">8</div>
+							<div class="Entity">9</div>
+							<div class="Entity">10</div>
+						</div>
+				</div>
+				<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Alerts</div>
+						<div style="margin: 5px;font-size: 25px;">
+							<div class="Entity">1</div>
+							<div class="Entity">2</div>
+							<div class="Entity">3</div>
+							<div class="Entity">4</div>
+							<div class="Entity">5</div>
+							<div class="Entity">6</div>
+							<div class="Entity">7</div>
+							<div class="Entity">8</div>
+							<div class="Entity">9</div>
+							<div class="Entity">10</div>
+						</div>
+				</div>
+				<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Patents Field</div>
+						<div style="margin: 5px;font-size: 25px;">
+							<div class="Entity">1</div>
+							<div class="Entity">2</div>
+							<div class="Entity">3</div>
+							<div class="Entity">4</div>
+							<div class="Entity">5</div>
+							<div class="Entity">6</div>
+							<div class="Entity">7</div>
+							<div class="Entity">8</div>
+							<div class="Entity">9</div>
+							<div class="Entity">10</div>
+						</div>
+				</div>
+				<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Academic Calender</div>
+						<div style="margin: 5px;font-size: 25px;">
+							<div class="Entity">1</div>
+							<div class="Entity">2</div>
+							<div class="Entity">3</div>
+							<div class="Entity">4</div>
+							<div class="Entity">5</div>
+							<div class="Entity">6</div>
+							<div class="Entity">7</div>
+							<div class="Entity">8</div>
+							<div class="Entity">9</div>
+							<div class="Entity">10</div>
+						</div>
+				</div>
+				<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Attendence</div>
+						<div style="margin: 5px;font-size: 25px;">
+							<div class="Entity">1</div>
+							<div class="Entity">2</div>
+							<div class="Entity">3</div>
+							<div class="Entity">4</div>
+							<div class="Entity">5</div>
+							<div class="Entity">6</div>
+							<div class="Entity">7</div>
+							<div class="Entity">8</div>
+							<div class="Entity">9</div>
+							<div class="Entity">10</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<div class="Abox2">
+			<div class="Activity-sub-conatiner">
+				<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Opportunity Activity</div>
+						<div style="margin: 5px;font-size: 25px;">
+							<div class="Entity">1</div>
+							<div class="Entity">2</div>
+						</div>
+					</div>
+				</div>
+				<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Idea Box</div>
+						<div>
+							<textarea style="margin: 5px;font-size: 25px;min-width: 500px;min-height: 500px;" placeholder="Thoughtfull ideas are valued, respected and encouraged. The purpose of the idea box is to generate constructive idea, suggestions, and brainstorms from you. Our aim is to help you achieve innovate excellence inside your own university by making innovation resources, answers, and best practices accessible for the greater good."></textarea>
+						</div>
+					</div>
+					<div class="ASbox-Recent-Activity">
+					<div style="background-color: #333;min-width: 350px;padding: 10px;font-size: 25px;color: white;">Birthday Wishes</div>
+						<div style="margin: 5px;font-size: 25px;">
+							<div class="Entity">1</div>
+							<div class="Entity">2</div>
+							<div class="Entity">3</div>
+							<div class="Entity">4</div>
+							<div class="Entity">5</div>
+							<div class="Entity">6</div>
+							<div class="Entity">7</div>
+							<div class="Entity">8</div>
+							<div class="Entity">9</div>
+							<div class="Entity">10</div>
+						</div>
+					</div>
+				</div>
 				</div>
 			</div>
 		</div>
