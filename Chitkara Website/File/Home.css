@@ -15,7 +15,7 @@
 			opacity:0;
 		}
 		to{
-		 	top:0;
+		 	top:0px;
 		 	opacity:1;
 		 }
 	}
@@ -33,7 +33,7 @@
 	  display: inline-block;
 	  color: white;
 	  text-align: center;
-	  border: 1px solid #333;
+	  border: 1px solid #262626;
 	  padding: 14px 16px;
 	  text-decoration: none;
 	}
@@ -88,7 +88,6 @@
 	.flex-container{
 		display: flex;
 		align-items: stretch;
-		/*justify-content: space-around;*/
 		flex-wrap: wrap;
 		margin: 18px 6px 18px 6px;
 	}
@@ -96,11 +95,20 @@
 		flex: 1;
 		min-width: 200px;
 		margin: 2px 2px 2px 2px;
+		opacity: 0.8;
 		box-shadow: 8px 8px 20px gray;
+		transition: opacity 0.2s;
 	}
 	.container-box:hover{
 		cursor: pointer;
 		box-shadow: 5px 5px 20px gray;
+		opacity: 1;
+		border: 1px solid rgba(38, 38, 38,0.9);
+	}
+	.container-box:active{
+		box-shadow: none;
+		margin-top: 5px;
+		margin-bottom: 0px;
 	}
 	.container-box .box{
 		padding: 10px;
@@ -131,6 +139,7 @@
 
 	.Activitys-container{
 		display: flex;
+		flex-wrap: wrap;
 		/*margin: 8px 10px 8px 10px;*/
 	}
 	.Abox1{
