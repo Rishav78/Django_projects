@@ -11,13 +11,13 @@ def Home(request):
 def welcome(request):
     return render(request,'Home.html')
 
-# def f(request):
-#     if request.method == 'POST':
-#         form = UserCreationForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             return HttpResponse("chbhf")
-#     return render(request,'form.html')
+def SignUp(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponse("chbhf")
+    return render(request,'form.html')
 
 def Login(request):
         if request.method == 'POST':
@@ -25,8 +25,5 @@ def Login(request):
                 if form.is_valid():
                         user = form.get_user()
                         login(request ,user)
-                        if request.POST['username'] == "rishav":
-                                return redirect("welc")
-                        else:
-                                return HttpResponse("you r not allowed")
+                        return redirect("welc")
         return render(request,'login.html')

@@ -21,7 +21,7 @@ input[type="submit"]{
 	.box:hover{
 		box-shadow: 5px 8px 40px gray;
 	}
-	.textbox{
+	input[type="text"],input[type="password"]{
 		outline: none;
 		display: block;
 		border: none;
@@ -32,7 +32,7 @@ input[type="submit"]{
 		width: 400px;
 		font-size: 15px;
 	}
-	.textbox:hover{
+	input[type="text"]:hover,input[type="password"]:hover{
 		border-color: rgba(107, 107, 71, 1);
 		box-shadow: 8px 8px 20px gray;
 	}
@@ -41,9 +41,7 @@ input[type="submit"]{
 		padding-top: 10px;
 		padding-bottom: 10px;
 		border: none;
-		width: 800px;
 		margin: auto;
-		height: 500px;
 		background-color: white;
 	}
 	table:hover{
@@ -52,12 +50,11 @@ input[type="submit"]{
 	table td{
 		padding: 25px;
 		border: none;
-		width: 450px;
-		max-width: 450px;
 		min-width: 450px;
 		overflow: hidden;
 	}
 	.table{
+		margin: auto;
 		margin-top: 15px;
 		margin-bottom: 0px;
 	}

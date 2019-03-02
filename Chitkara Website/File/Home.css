@@ -2,10 +2,24 @@
 		max-width: 1500px;
 		margin: auto;
 	}
+	a{
+		color: black;
+	}
 	.topdown
 	{
 			position:relative;
 			animation:animatetop 1s;
+	}
+	.parent{
+		background-color: red;
+		padding: 30px;
+		border-radius: 8px;
+		display: inline-block;
+	}
+	.child1{
+		border-top: 8px solid white;
+		border-right: 8px solid white;
+		padding: 10px 10px 0px 0px;
 	}
 	@keyframes animatetop
 	{
@@ -88,6 +102,7 @@
 	.flex-container{
 		display: flex;
 		align-items: stretch;
+		min-height: 180px;
 		flex-wrap: wrap;
 		margin: 18px 6px 18px 6px;
 	}
@@ -96,16 +111,18 @@
 		min-width: 200px;
 		margin: 2px 2px 2px 2px;
 		opacity: 0.8;
-		box-shadow: 8px 8px 20px gray;
+		box-shadow: 5px 5px 20px gray;
+		border: 1px solid white;
 		transition: opacity 0.2s;
 	}
 	.container-box:hover{
 		cursor: pointer;
-		box-shadow: 5px 5px 20px gray;
+		box-shadow: 3px 3px 20px gray;
 		opacity: 1;
 		border: 1px solid rgba(38, 38, 38,0.9);
 	}
 	.container-box:active{
+		border: 1px solid rgba(38, 38, 38,0.9);
 		box-shadow: none;
 		margin-top: 5px;
 		margin-bottom: 0px;
